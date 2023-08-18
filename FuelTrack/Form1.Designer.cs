@@ -44,16 +44,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.TxtGazFiyat = new System.Windows.Forms.TextBox();
+            this.TxtProDizelFiyat = new System.Windows.Forms.TextBox();
+            this.TxtEuroDizelFiyat = new System.Windows.Forms.TextBox();
+            this.TxtKursunsuz97Fiyat = new System.Windows.Forms.TextBox();
+            this.TxtKursunsuz95Fiyat = new System.Windows.Forms.TextBox();
             this.BtnDepoDoldur = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -72,10 +67,20 @@
             this.LblKasa = new System.Windows.Forms.Label();
             this.TxtPlaka = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -230,19 +235,19 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.numericUpDown5);
+            this.groupBox2.Controls.Add(this.numericUpDown3);
+            this.groupBox2.Controls.Add(this.numericUpDown4);
+            this.groupBox2.Controls.Add(this.numericUpDown2);
+            this.groupBox2.Controls.Add(this.numericUpDown1);
             this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.TxtPlaka);
             this.groupBox2.Controls.Add(this.BtnDepoDoldur);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.TxtGazFiyat);
+            this.groupBox2.Controls.Add(this.TxtProDizelFiyat);
+            this.groupBox2.Controls.Add(this.TxtEuroDizelFiyat);
+            this.groupBox2.Controls.Add(this.TxtKursunsuz97Fiyat);
+            this.groupBox2.Controls.Add(this.TxtKursunsuz95Fiyat);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Location = new System.Drawing.Point(435, 6);
@@ -271,75 +276,40 @@
             this.label14.TabIndex = 12;
             this.label14.Text = "Litre";
             // 
-            // textBox1
+            // TxtGazFiyat
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 30);
-            this.textBox1.TabIndex = 14;
+            this.TxtGazFiyat.Location = new System.Drawing.Point(228, 357);
+            this.TxtGazFiyat.Name = "TxtGazFiyat";
+            this.TxtGazFiyat.Size = new System.Drawing.Size(163, 30);
+            this.TxtGazFiyat.TabIndex = 23;
             // 
-            // textBox2
+            // TxtProDizelFiyat
             // 
-            this.textBox2.Location = new System.Drawing.Point(28, 159);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 30);
-            this.textBox2.TabIndex = 15;
+            this.TxtProDizelFiyat.Location = new System.Drawing.Point(228, 291);
+            this.TxtProDizelFiyat.Name = "TxtProDizelFiyat";
+            this.TxtProDizelFiyat.Size = new System.Drawing.Size(163, 30);
+            this.TxtProDizelFiyat.TabIndex = 22;
             // 
-            // textBox3
+            // TxtEuroDizelFiyat
             // 
-            this.textBox3.Location = new System.Drawing.Point(28, 225);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 30);
-            this.textBox3.TabIndex = 16;
+            this.TxtEuroDizelFiyat.Location = new System.Drawing.Point(228, 225);
+            this.TxtEuroDizelFiyat.Name = "TxtEuroDizelFiyat";
+            this.TxtEuroDizelFiyat.Size = new System.Drawing.Size(163, 30);
+            this.TxtEuroDizelFiyat.TabIndex = 21;
             // 
-            // textBox4
+            // TxtKursunsuz97Fiyat
             // 
-            this.textBox4.Location = new System.Drawing.Point(28, 291);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 30);
-            this.textBox4.TabIndex = 17;
+            this.TxtKursunsuz97Fiyat.Location = new System.Drawing.Point(228, 159);
+            this.TxtKursunsuz97Fiyat.Name = "TxtKursunsuz97Fiyat";
+            this.TxtKursunsuz97Fiyat.Size = new System.Drawing.Size(163, 30);
+            this.TxtKursunsuz97Fiyat.TabIndex = 20;
             // 
-            // textBox5
+            // TxtKursunsuz95Fiyat
             // 
-            this.textBox5.Location = new System.Drawing.Point(28, 357);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 30);
-            this.textBox5.TabIndex = 18;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(228, 357);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 30);
-            this.textBox6.TabIndex = 23;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(228, 291);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(163, 30);
-            this.textBox7.TabIndex = 22;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(228, 225);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 30);
-            this.textBox8.TabIndex = 21;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(228, 159);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(163, 30);
-            this.textBox9.TabIndex = 20;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(228, 93);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(163, 30);
-            this.textBox10.TabIndex = 19;
+            this.TxtKursunsuz95Fiyat.Location = new System.Drawing.Point(228, 93);
+            this.TxtKursunsuz95Fiyat.Name = "TxtKursunsuz95Fiyat";
+            this.TxtKursunsuz95Fiyat.Size = new System.Drawing.Size(163, 30);
+            this.TxtKursunsuz95Fiyat.TabIndex = 19;
             // 
             // BtnDepoDoldur
             // 
@@ -517,6 +487,46 @@
             this.label23.TabIndex = 26;
             this.label23.Text = "Plaka:";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(28, 94);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(163, 30);
+            this.numericUpDown1.TabIndex = 27;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(28, 159);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(163, 30);
+            this.numericUpDown2.TabIndex = 28;
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(28, 292);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(163, 30);
+            this.numericUpDown3.TabIndex = 30;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(28, 226);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(163, 30);
+            this.numericUpDown4.TabIndex = 29;
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(28, 358);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(163, 30);
+            this.numericUpDown5.TabIndex = 31;
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -541,6 +551,11 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,16 +578,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox TxtGazFiyat;
+        private System.Windows.Forms.TextBox TxtProDizelFiyat;
+        private System.Windows.Forms.TextBox TxtEuroDizelFiyat;
+        private System.Windows.Forms.TextBox TxtKursunsuz97Fiyat;
+        private System.Windows.Forms.TextBox TxtKursunsuz95Fiyat;
         private System.Windows.Forms.Button BtnDepoDoldur;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ProgressBar progressBar1;
@@ -591,6 +601,11 @@
         private System.Windows.Forms.Label LblKasa;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

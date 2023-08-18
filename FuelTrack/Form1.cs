@@ -30,7 +30,7 @@ namespace FuelTrack
             while (dr.Read())
             {
                 LblKurs95.Text = dr[3].ToString();
-                progressBar1.Value = int.Parse(dr[4].ToString());   
+                progressBar1.Value = int.Parse(dr[4].ToString());
                 LblKur95Litre.Text = dr[4].ToString();
             }
             baglanti.Close();
@@ -67,7 +67,7 @@ namespace FuelTrack
             {
                 LblYenDiz.Text = dr3[3].ToString();
                 progressBar4.Value = int.Parse(dr3[4].ToString());
-                LblProLitre.Text = dr3[4].ToString();    
+                LblProLitre.Text = dr3[4].ToString();
             }
             baglanti.Close();
 
@@ -86,5 +86,51 @@ namespace FuelTrack
 
 
         }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            double kursunsuz95, litre, tutar;
+            kursunsuz95 = Convert.ToDouble(LblKurs95.Text);
+            litre = Convert.ToDouble(numericUpDown1.Value);
+            tutar = kursunsuz95 * litre;
+            TxtKursunsuz95Fiyat.Text = tutar.ToString();
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            double kursunsuz97, litre, tutar;
+            kursunsuz97 = Convert.ToDouble(LblKur97.Text);
+            litre = Convert.ToDouble(numericUpDown2.Value);
+            tutar = kursunsuz97 * litre;
+            TxtKursunsuz97Fiyat.Text = tutar.ToString();
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            double eurodizel10, litre, tutar;
+            eurodizel10 = Convert.ToDouble(LblDiz10.Text);
+            litre = Convert.ToDouble(numericUpDown4.Value);
+            tutar = eurodizel10 * litre;
+            TxtEuroDizelFiyat.Text = tutar.ToString();
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            double yenipro, litre, tutar;
+            yenipro = Convert.ToDouble(LblYenDiz.Text);
+            litre = Convert.ToDouble(numericUpDown3.Value);
+            tutar = yenipro * litre;
+            TxtProDizelFiyat.Text = tutar.ToString();
+        }
+
+        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+            double gaz, litre, tutar;
+            gaz = Convert.ToDouble(LblGaz.Text);
+            litre = Convert.ToDouble(numericUpDown5.Value);
+            tutar = gaz * litre;
+            TxtGazFiyat.Text = tutar.ToString();
+        }
     }
+
 }
