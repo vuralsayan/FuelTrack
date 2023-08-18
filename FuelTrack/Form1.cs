@@ -30,6 +30,8 @@ namespace FuelTrack
             while (dr.Read())
             {
                 LblKurs95.Text = dr[3].ToString();
+                progressBar1.Value = int.Parse(dr[4].ToString());   
+                LblKur95Litre.Text = dr[4].ToString();
             }
             baglanti.Close();
 
@@ -40,6 +42,8 @@ namespace FuelTrack
             while (dr1.Read())
             {
                 LblKur97.Text = dr1[3].ToString();
+                progressBar2.Value = int.Parse(dr1[4].ToString());
+                LblKur97Litre.Text = dr1[4].ToString();
             }
             baglanti.Close();
 
@@ -50,6 +54,8 @@ namespace FuelTrack
             while (dr2.Read())
             {
                 LblDiz10.Text = dr2[3].ToString();
+                progressBar3.Value = int.Parse(dr2[4].ToString());
+                LblEuroLitre.Text = dr2[4].ToString();
             }
             baglanti.Close();
 
@@ -60,6 +66,8 @@ namespace FuelTrack
             while (dr3.Read())
             {
                 LblYenDiz.Text = dr3[3].ToString();
+                progressBar4.Value = int.Parse(dr3[4].ToString());
+                LblProLitre.Text = dr3[4].ToString();    
             }
             baglanti.Close();
 
@@ -70,6 +78,8 @@ namespace FuelTrack
             while (dr4.Read())
             {
                 LblGaz.Text = dr4[3].ToString();
+                progressBar5.Value = int.Parse(dr4[4].ToString());
+                LblGazLitre.Text = dr4[4].ToString();
             }
             baglanti.Close();
 

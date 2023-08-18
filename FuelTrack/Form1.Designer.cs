@@ -62,11 +62,11 @@
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.LblKur95Litre = new System.Windows.Forms.Label();
+            this.LblKur97Litre = new System.Windows.Forms.Label();
+            this.LblEuroLitre = new System.Windows.Forms.Label();
+            this.LblProLitre = new System.Windows.Forms.Label();
+            this.LblGazLitre = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.LblKasa = new System.Windows.Forms.Label();
@@ -353,11 +353,11 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.LblGazLitre);
+            this.groupBox3.Controls.Add(this.LblProLitre);
+            this.groupBox3.Controls.Add(this.LblEuroLitre);
+            this.groupBox3.Controls.Add(this.LblKur97Litre);
+            this.groupBox3.Controls.Add(this.LblKur95Litre);
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Controls.Add(this.progressBar5);
             this.groupBox3.Controls.Add(this.progressBar3);
@@ -373,6 +373,7 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(6, 91);
+            this.progressBar1.Maximum = 10000;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(360, 30);
             this.progressBar1.TabIndex = 0;
@@ -380,6 +381,7 @@
             // progressBar2
             // 
             this.progressBar2.Location = new System.Drawing.Point(6, 157);
+            this.progressBar2.Maximum = 10000;
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(360, 30);
             this.progressBar2.TabIndex = 1;
@@ -387,6 +389,7 @@
             // progressBar3
             // 
             this.progressBar3.Location = new System.Drawing.Point(6, 289);
+            this.progressBar3.Maximum = 10000;
             this.progressBar3.Name = "progressBar3";
             this.progressBar3.Size = new System.Drawing.Size(360, 30);
             this.progressBar3.TabIndex = 3;
@@ -394,6 +397,7 @@
             // progressBar4
             // 
             this.progressBar4.Location = new System.Drawing.Point(6, 223);
+            this.progressBar4.Maximum = 10000;
             this.progressBar4.Name = "progressBar4";
             this.progressBar4.Size = new System.Drawing.Size(360, 30);
             this.progressBar4.TabIndex = 2;
@@ -401,6 +405,7 @@
             // progressBar5
             // 
             this.progressBar5.Location = new System.Drawing.Point(6, 355);
+            this.progressBar5.Maximum = 10000;
             this.progressBar5.Name = "progressBar5";
             this.progressBar5.Size = new System.Drawing.Size(360, 30);
             this.progressBar5.TabIndex = 4;
@@ -415,55 +420,55 @@
             this.label15.TabIndex = 25;
             this.label15.Text = "Depo Petrol Miktarı";
             // 
-            // label16
+            // LblKur95Litre
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(386, 91);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(68, 27);
-            this.label16.TabIndex = 26;
-            this.label16.Text = "0,00";
+            this.LblKur95Litre.AutoSize = true;
+            this.LblKur95Litre.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblKur95Litre.Location = new System.Drawing.Point(386, 91);
+            this.LblKur95Litre.Name = "LblKur95Litre";
+            this.LblKur95Litre.Size = new System.Drawing.Size(68, 27);
+            this.LblKur95Litre.TabIndex = 26;
+            this.LblKur95Litre.Text = "0,00";
             // 
-            // label17
+            // LblKur97Litre
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.Location = new System.Drawing.Point(386, 157);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(68, 27);
-            this.label17.TabIndex = 27;
-            this.label17.Text = "0,00";
+            this.LblKur97Litre.AutoSize = true;
+            this.LblKur97Litre.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblKur97Litre.Location = new System.Drawing.Point(386, 157);
+            this.LblKur97Litre.Name = "LblKur97Litre";
+            this.LblKur97Litre.Size = new System.Drawing.Size(68, 27);
+            this.LblKur97Litre.TabIndex = 27;
+            this.LblKur97Litre.Text = "0,00";
             // 
-            // label18
+            // LblEuroLitre
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.Location = new System.Drawing.Point(386, 223);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(68, 27);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "0,00";
+            this.LblEuroLitre.AutoSize = true;
+            this.LblEuroLitre.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblEuroLitre.Location = new System.Drawing.Point(386, 223);
+            this.LblEuroLitre.Name = "LblEuroLitre";
+            this.LblEuroLitre.Size = new System.Drawing.Size(68, 27);
+            this.LblEuroLitre.TabIndex = 28;
+            this.LblEuroLitre.Text = "0,00";
             // 
-            // label19
+            // LblProLitre
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.Location = new System.Drawing.Point(386, 289);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 27);
-            this.label19.TabIndex = 29;
-            this.label19.Text = "0,00";
+            this.LblProLitre.AutoSize = true;
+            this.LblProLitre.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblProLitre.Location = new System.Drawing.Point(386, 289);
+            this.LblProLitre.Name = "LblProLitre";
+            this.LblProLitre.Size = new System.Drawing.Size(68, 27);
+            this.LblProLitre.TabIndex = 29;
+            this.LblProLitre.Text = "0,00";
             // 
-            // label20
+            // LblGazLitre
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(386, 355);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 27);
-            this.label20.TabIndex = 30;
-            this.label20.Text = "0,00";
+            this.LblGazLitre.AutoSize = true;
+            this.LblGazLitre.Font = new System.Drawing.Font("Georgia", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblGazLitre.Location = new System.Drawing.Point(386, 355);
+            this.LblGazLitre.Name = "LblGazLitre";
+            this.LblGazLitre.Size = new System.Drawing.Size(68, 27);
+            this.LblGazLitre.TabIndex = 30;
+            this.LblGazLitre.Text = "0,00";
             // 
             // groupBox4
             // 
@@ -576,11 +581,11 @@
         private System.Windows.Forms.ProgressBar progressBar4;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label LblKur95Litre;
+        private System.Windows.Forms.Label LblGazLitre;
+        private System.Windows.Forms.Label LblProLitre;
+        private System.Windows.Forms.Label LblEuroLitre;
+        private System.Windows.Forms.Label LblKur97Litre;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox TxtPlaka;
         private System.Windows.Forms.Label LblKasa;
