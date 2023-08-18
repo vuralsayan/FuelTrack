@@ -21,7 +21,7 @@ namespace FuelTrack
         SqlConnection baglanti = new SqlConnection(@"Data Source=Vural\SQLEXPRESS;Initial Catalog=DbBenzin;Integrated Security=True");
 
 
-        private void Form1_Load(object sender, EventArgs e)
+        void Listele()
         {
             //Kurşunsuz 95
             baglanti.Open();
@@ -83,8 +83,21 @@ namespace FuelTrack
             }
             baglanti.Close();
 
+            //Kasa
+            baglanti.Open();
+            SqlCommand komut5 = new SqlCommand("SELECT * FROM TBLKASA", baglanti);
+            SqlDataReader dr5 = komut5.ExecuteReader();
+            while (dr5.Read())
+            {
+                LblKasa.Text = dr5[0].ToString();
+            }
+            baglanti.Close();
+        }
 
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Listele();
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -130,6 +143,39 @@ namespace FuelTrack
             litre = Convert.ToDouble(numericUpDown5.Value);
             tutar = gaz * litre;
             TxtGazFiyat.Text = tutar.ToString();
+        }
+
+        private void BtnDepoDoldur_Click(object sender, EventArgs e)
+        {
+            if (numericUpDown1.Value != 0)
+            {
+                baglanti.Open();
+                SqlCommand komut = new SqlCommand("INSERT INTO TBLHAREKET (PLAKA,BENZINTURU,LITRE,FIYAT) VALUES(@p1,@p2,@p3,@p4)", baglanti);
+                komut.Parameters.AddWithValue("@p1", TxtPlaka.Text);
+                komut.Parameters.AddWithValue("@p2", LblKurs95.Text);
+                komut.Parameters.AddWithValue("@p3", numericUpDown1.Value);
+                komut.Parameters.AddWithValue("@p4", decimal.Parse(TxtKursunsuz95Fiyat.Text));
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+
+                //Kasadaki para güncelleme
+                baglanti.Open();
+                SqlCommand komut2 = new SqlCommand("UPDATE TBLKASA SET MIKTAR=MIKTAR+@p1", baglanti);
+                komut2.Parameters.AddWithValue("@p1", decimal.Parse(TxtKursunsuz95Fiyat.Text));
+                komut2.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Depo Dolduruldu", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Stok güncelleme
+                baglanti.Open();
+                SqlCommand komut3 = new SqlCommand("UPDATE TBLBENZIN SET STOK=STOK-@p1 WHERE PETROLTUR='Kurşunsuz95'", baglanti);
+                komut3.Parameters.AddWithValue("@p1", numericUpDown1.Value);
+                komut3.ExecuteNonQuery();
+                baglanti.Close();
+                MessageBox.Show("Stok Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Listele();
+
+            }
         }
     }
 

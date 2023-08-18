@@ -320,6 +320,7 @@
             this.BtnDepoDoldur.TabIndex = 24;
             this.BtnDepoDoldur.Text = "Depo Doldur";
             this.BtnDepoDoldur.UseVisualStyleBackColor = true;
+            this.BtnDepoDoldur.Click += new System.EventHandler(this.BtnDepoDoldur_Click);
             // 
             // groupBox3
             // 
